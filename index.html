@@ -1,0 +1,85 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+<head>
+
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title>Rainbow Table</title>
+	<meta name="description" content="" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
+	<link rel="stylesheet" href="dist/css/main.min.css?v=100" />
+
+	<script type="text/javascript" src="dist/js/head-bundle.js?v=100"></script>
+
+	<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+	<script>
+    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+    e.src='//www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    ga('create','UA-XXXXX-X','auto');
+    ga('send','pageview');
+	</script>
+
+</head>
+<body>
+
+	<div class="banner">
+    <div class="container">
+			<h1>Rainbow Table</h1>
+			<p>A progressive highlighter stylesheet for your cells !</p>
+		</div>
+	</div>
+
+	<div class="section">
+    <div class="container">
+      <table id="table"></table>
+      <br/>
+      <input id="btn" class="btn btn-link" type="button" value="Randomize !" />
+    </div>
+	</div>
+
+	<div class="section">
+	  <div class="container">
+	  	<h2>Download your own stylesheet</h2>
+			<form id="valueForm">
+				<div class="col">
+					<label for="maxNb">Number of cells</label>
+				</div>
+				<div class="col">
+					<input type="number" id="maxNb" placeholder="Default : 50" />
+				</div>
+				<div>
+					<input type="submit" id="btnForm" value="Download" />
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<div class="footer">
+		<div class="container">
+			@Rainbow Table 2015 • Made by <a target="_blank" href="http://thibaudb.com">Thibaud B.</a>
+		</div>
+	</div>
+
+
+	<script id="tpl" type="text/x-handlebars-template">
+		{{#each this}}
+		  <tr>
+		  	{{#each this}}
+		  	  <td style="background: hsl({{color}});">{{number}}</td>
+		  	{{/each}}
+		  </tr>
+		{{/each}}
+	</script>
+	
+	<script type="text/javascript" src="dist/js/bundle.js?v=100"></script>
+
+</body>
+</html>
