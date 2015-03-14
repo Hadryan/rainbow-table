@@ -18,7 +18,6 @@ html, body {
 }
 
 .section {
-	// margin-bottom: 6em;
 	padding: 6em 0;
 }
 
@@ -27,6 +26,7 @@ html, body {
 	padding: 6em 0;
 	// color: darken(#FC8D83, 15%);
 	color: #CB5247;
+	margin-top: 6em;
 
 	a {
 		color: #CB5247;
@@ -51,6 +51,7 @@ table {
   width: 100%;
   margin: auto;
   border: none;
+  margin-bottom: 4em;
     
   td { 
 	  border: none;
@@ -77,10 +78,31 @@ form {
 	.col {
 		// width: 50%;
 		display: inline-block;
-		margin-bottom: 1em;
+		margin-bottom: 3em;
 	}
 
 	label {
 		margin-right: 20px
+	}
+
+	input {
+		text-align: center;
+	}
+}
+
+.btn {
+	background-color: transparent !important;
+	border: 2px solid #FC8D83 !important;
+	color: #FC8D83 !important;
+	border-radius: 3px;
+	font-size: 1em;
+	font-weight: 600;
+	line-height: 1;
+	padding: .75em 1em;
+
+	&:hover, &:active, &:focus {
+		border: 2px solid #CB5247 !important;
+		color: #CB5247 !important;
+		outline: 0;
 	}
 }

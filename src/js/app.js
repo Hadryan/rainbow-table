@@ -91,6 +91,7 @@ app = function(){
 
 		btn.addEventListener('click', function() {
 			buildTable();
+			return false;
 		});
 
 		valueForm.addEventListener('submit', function(e) {
