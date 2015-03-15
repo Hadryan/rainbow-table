@@ -85,11 +85,11 @@ app = function(){
 	 * Event Listeners
 	 */
 	var events = function() {
-		var btn = document.querySelector('#btn');
+		var btnRandom = document.querySelector('#btnRandom');
 		var valueForm = document.querySelector('#valueForm');
 		maxNb.value = params.max;
 
-		btn.addEventListener('click', function() {
+		btnRandom.addEventListener('click', function() {
 			buildTable();
 			return false;
 		});

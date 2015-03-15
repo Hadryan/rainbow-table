@@ -3,22 +3,46 @@ html, body {
   height: 100%;
   max-height: 100%;
   margin: 0;
+	color: $blue;
+}
+
+h1 {
+	font-size: 3.3em;
+	margin-bottom: .2em;
+}
+
+h2 {
+	font-size: 2em;
+	margin-bottom: 1em;
 }
 
 .banner {
+	border-top: 4px solid $blue;
 	@include linear-gradient(to right, #FCA183, #E4FC83, #91FC83, #009DED, #8583FC);
 	// @include linear-gradient(#1e5799, #2989d8);
-	padding: 200px 0;
+	padding: 9em 0;
 	text-align: center;
 
-	h1 {
-		font-size: 3.2em;
-		margin-bottom: .4em;
+
+	p {
+		color: $blue;
 	}
 }
 
 .section {
-	padding: 6em 0;
+	padding: 4em 0;
+
+	&.section-demo {
+
+	}
+
+	&.section-download {
+		h2 {
+			padding-top: 2em;
+			border-top: 1px solid #ddd;
+		}
+
+	}
 }
 
 .footer {
@@ -52,11 +76,12 @@ table {
   margin: auto;
   border: none;
   margin-bottom: 4em;
+	margin-top: 2em;
     
   td { 
-	  border: none;
-		height: 80px; 
-
+	  border: 3px solid #fff;
+	  height: 5.2em;
+		padding: 0;
 	}
 }
 
@@ -66,27 +91,28 @@ table {
   margin: auto;
 }
 
-h2 {
-	padding-top: 2em;
-	border-top: 1px solid #ddd;
-	font-size: 2em;
-	margin-bottom: 2em;
-}
+
 
 form {
 
 	.col {
 		// width: 50%;
 		display: inline-block;
-		margin-bottom: 3em;
+		margin: 2em 0;
 	}
 
 	label {
 		margin-right: 20px
 	}
 
-	input {
-		text-align: center;
+	input#maxNb {
+		width: 58px;
+		text-align: right;
+		border-radius: 0;
+		border: none;
+		border-bottom: 2px solid $blue;
+		box-shadow: none;
+		color: $blue;
 	}
 }
 
@@ -99,6 +125,7 @@ form {
 	font-weight: 600;
 	line-height: 1;
 	padding: .75em 1em;
+  display: inline-block;
 
 	&:hover, &:active, &:focus {
 		border: 2px solid #CB5247 !important;
