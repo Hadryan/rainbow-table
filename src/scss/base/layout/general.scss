@@ -16,6 +16,12 @@ h2 {
 	margin-bottom: 1em;
 }
 
+code {
+	background: lighten($blue, 70%);
+	padding: 3px 6px;
+	border-radius: 3px;
+}
+
 .banner {
 	border-top: 4px solid $blue;
 	@include linear-gradient(to right, #FCA183, #E4FC83, #91FC83, #009DED, #8583FC);
@@ -36,6 +42,7 @@ h2 {
 
 	}
 
+	&.section-use,
 	&.section-download {
 		h2 {
 			padding-top: 2em;
